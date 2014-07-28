@@ -15,13 +15,20 @@ I spiked on implementing [the AZ balancing feature](https://www.pivotaltracker.c
 
 ## <a id="completed-tasks"/>Completed Tasks
 
-* Refactor simulation so its easy to add more tests | [Auction](https://github.com/amitkgupta/auction/commit/385fa9c5c079e3e3675d62fb69d21d6af44c1350)
-* Give Reps knowledge of what "AZ" they're on, and add statistics about AZ balancing *before* implementing AZ balancing, so we can see the before/after improvement | [Rep](https://github.com/amitkgupta/rep/commit/07d0d79ec73a955b5f2703381dbb31971a213929) | [Auction](https://github.com/amitkgupta/auction/commit/1fcc123864903bc61aa2b2996d87df55f63a85f8)
-* App-Manager knows how many AZs Reps/Executors are distributed across, and communicates this number to the Auctioneer via LRPStartAuction and LRPStopAuction | [App-Manager](https://github.com/amitkgupta/app-manager/commit/4ff9629818699c04cb2095ebe0558be9eb390dec) | [Auctioneer](https://github.com/amitkgupta/auctioneer/commit/e312a4c7cad6d2a29b5b88a9b582c7362b7e1f9e) | [Runtime-Schema](https://github.com/amitkgupta/runtime-schema/commits/az_balance)
-* Auction combines NumberOfAZs from App-Manager and AZNumber from Rep to take AZ balancing into account when computing score/bid | [Auction](https://github.com/amitkgupta/auction/commit/3e946ca0887934fb5da3efdf63e79a810b696468)
-* Update Inigo, see it pass | [Inigo](https://github.com/amitkgupta/inigo/commit/24a8e06f13ad0110dd1d45bf3036aadaf38e5c9c)
-* Bump Deps | [App-Manager](https://github.com/amitkgupta/app-manager/commit/2caa83c41ec3db33b1faf6520e289140c09c4437) | [Auctioneer](https://github.com/amitkgupta/auctioneer/commit/f54fbb54a8851375d55215bcb450c79160324b50) | [Inigo](https://github.com/amitkgupta/inigo/commit/a49fd2686f1a7c5235311072264b6760fbc1320d) | [Rep](https://github.com/amitkgupta/rep/commit/d8c889466c90df6f8d32b9062aa4b5cdafacade1)
-* Update Diego-Release to pass `numAZs` to App-Manager and `AZNumber` to each rep | [Diego-Release](https://github.com/amitkgupta/diego-release/commits/az_balance)
+* Refactor simulation so its easy to add more tests  
+  [Auction](https://github.com/amitkgupta/auction/commit/385fa9c5c079e3e3675d62fb69d21d6af44c1350)
+* Give Reps knowledge of what "AZ" they're on, and add statistics about AZ balancing *before* implementing AZ balancing, so we can see the before/after improvement  
+  [Rep](https://github.com/amitkgupta/rep/commit/07d0d79ec73a955b5f2703381dbb31971a213929) | [Auction](https://github.com/amitkgupta/auction/commit/1fcc123864903bc61aa2b2996d87df55f63a85f8)
+* App-Manager knows how many AZs Reps/Executors are distributed across, and communicates this number to the Auctioneer via LRPStartAuction and LRPStopAuction  
+  [App-Manager](https://github.com/amitkgupta/app-manager/commit/4ff9629818699c04cb2095ebe0558be9eb390dec) | [Auctioneer](https://github.com/amitkgupta/auctioneer/commit/e312a4c7cad6d2a29b5b88a9b582c7362b7e1f9e) | [Runtime-Schema](https://github.com/amitkgupta/runtime-schema/commits/az_balance)
+* Auction combines NumberOfAZs from App-Manager and AZNumber from Rep to take AZ balancing into account when computing score/bid  
+  [Auction](https://github.com/amitkgupta/auction/commit/3e946ca0887934fb5da3efdf63e79a810b696468)
+* Update Inigo, see it pass  
+  [Inigo](https://github.com/amitkgupta/inigo/commit/24a8e06f13ad0110dd1d45bf3036aadaf38e5c9c)
+* Bump Deps  
+  [App-Manager](https://github.com/amitkgupta/app-manager/commit/2caa83c41ec3db33b1faf6520e289140c09c4437) | [Auctioneer](https://github.com/amitkgupta/auctioneer/commit/f54fbb54a8851375d55215bcb450c79160324b50) | [Inigo](https://github.com/amitkgupta/inigo/commit/a49fd2686f1a7c5235311072264b6760fbc1320d) | [Rep](https://github.com/amitkgupta/rep/commit/d8c889466c90df6f8d32b9062aa4b5cdafacade1)
+* Update Diego-Release to pass `numAZs` to App-Manager and `AZNumber` to each rep  
+  [Diego-Release](https://github.com/amitkgupta/diego-release/commits/az_balance)
 * BOSH-Lite-AWS deploy `cf-release/acceptance-deployed` and `diego-release/az_balance` and see CATS pass. I've done this, and have an EC2 jumpbox you can go on and run CATS (and Inigo).
 
 ## <a id="other-wins"/>Other Wins
